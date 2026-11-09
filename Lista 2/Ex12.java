@@ -3,35 +3,33 @@ import java.util.Scanner;
 public class Exercicio12 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        int opcao;
 
-        System.out.print("Digite um número de 1 a 7: ");
-        int dia = sc.nextInt();
+        do {
+            System.out.println("1 - Somar");
+            System.out.println("2 - Subtrair");
+            System.out.println("3 - Sair");
+            System.out.print("Escolha uma opção: ");
+            opcao = sc.nextInt();
 
-        switch (dia) {
-            case 1:
-                System.out.println("Domingo");
-                break;
-            case 2:
-                System.out.println("Segunda-feira");
-                break;
-            case 3:
-                System.out.println("Terça-feira");
-                break;
-            case 4:
-                System.out.println("Quarta-feira");
-                break;
-            case 5:
-                System.out.println("Quinta-feira");
-                break;
-            case 6:
-                System.out.println("Sexta-feira");
-                break;
-            case 7:
-                System.out.println("Sábado");
-                break;
-            default:
-                System.out.println("Número inválido");
-        }
+            if (opcao == 1) {
+                System.out.print("Digite o primeiro número: ");
+                int a = sc.nextInt();
+                System.out.print("Digite o segundo número: ");
+                int b = sc.nextInt();
+                System.out.println("Resultado: " + (a + b));
+            } else if (opcao == 2) {
+                System.out.print("Digite o primeiro número: ");
+                int a = sc.nextInt();
+                System.out.print("Digite o segundo número: ");
+                int b = sc.nextInt();
+                System.out.println("Resultado: " + (a - b));
+            } else if (opcao == 3) {
+                System.out.println("Encerrando o programa...");
+            } else {
+                System.out.println("Opção inválida.");
+            }
+        } while (opcao != 3);
 
         sc.close();
     }

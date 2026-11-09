@@ -1,22 +1,20 @@
 import java.util.Scanner;
 
-public class Exercicio6 {
+public class Exercicio06 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        int maior = Integer.MIN_VALUE;
 
-        System.out.print("Digite a idade: ");
-        int idade = sc.nextInt();
+        for (int i = 1; i <= 5; i++) {
+            System.out.print("Digite o " + i + "º número: ");
+            int numero = sc.nextInt();
 
-        if (idade >= 0 && idade <= 12) {
-            System.out.println("Criança");
-        } else if (idade <= 17) {
-            System.out.println("Adolescente");
-        } else if (idade <= 59) {
-            System.out.println("Adulto");
-        } else {
-            System.out.println("Idoso");
+            if (numero > maior) {
+                maior = numero;
+            }
         }
 
+        System.out.println("Maior número: " + maior);
         sc.close();
     }
 }

@@ -1,27 +1,24 @@
 import java.util.Scanner;
 
-public class Exercicio7 {
+public class Exercicio07 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        int positivos = 0;
+        int negativos = 0;
 
-        System.out.print("Digite a primeira nota: ");
-        double nota1 = sc.nextDouble();
+        for (int i = 1; i <= 10; i++) {
+            System.out.print("Digite o " + i + "º número: ");
+            int numero = sc.nextInt();
 
-        System.out.print("Digite a segunda nota: ");
-        double nota2 = sc.nextDouble();
-
-        double media = (nota1 + nota2) / 2;
-
-        System.out.println("Média: " + media);
-
-        if (media >= 6) {
-            System.out.println("Aprovado");
-        } else if (media >= 4) {
-            System.out.println("Recuperação");
-        } else {
-            System.out.println("Reprovado");
+            if (numero > 0) {
+                positivos++;
+            } else if (numero < 0) {
+                negativos++;
+            }
         }
 
+        System.out.println("Positivos: " + positivos);
+        System.out.println("Negativos: " + negativos);
         sc.close();
     }
 }

@@ -1,21 +1,17 @@
 import java.util.Scanner;
 
-public class Exercicio9 {
+public class Exercicio09 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        System.out.print("Digite um número inteiro positivo: ");
+        int numero = sc.nextInt();
+        int fatorial = 1;
 
-        System.out.print("Digite o usuário: ");
-        String usuario = sc.nextLine();
-
-        System.out.print("Digite a senha: ");
-        String senha = sc.nextLine();
-
-        if (usuario.equals("admin") && senha.equals("1234")) {
-            System.out.println("Acesso permitido");
-        } else {
-            System.out.println("Acesso negado");
+        for (int i = numero; i >= 1; i--) {
+            fatorial *= i;
         }
 
+        System.out.println(numero + "! = " + fatorial);
         sc.close();
     }
 }

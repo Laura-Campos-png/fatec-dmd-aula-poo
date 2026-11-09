@@ -1,30 +1,20 @@
 import java.util.Scanner;
 
-public class Exercicio8 {
+public class Exercicio08 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        System.out.print("Quantos números deseja informar? ");
+        int quantidade = sc.nextInt();
+        double soma = 0;
 
-        System.out.print("Digite o primeiro número: ");
-        int a = sc.nextInt();
-
-        System.out.print("Digite o segundo número: ");
-        int b = sc.nextInt();
-
-        System.out.print("Digite o terceiro número: ");
-        int c = sc.nextInt();
-
-        int maior = a;
-
-        if (b > maior) {
-            maior = b;
+        for (int i = 1; i <= quantidade; i++) {
+            System.out.print("Digite o " + i + "º número: ");
+            double numero = sc.nextDouble();
+            soma += numero;
         }
 
-        if (c > maior) {
-            maior = c;
-        }
-
-        System.out.println("O maior número é: " + maior);
-
+        double media = soma / quantidade;
+        System.out.println("Média: " + media);
         sc.close();
     }
 }

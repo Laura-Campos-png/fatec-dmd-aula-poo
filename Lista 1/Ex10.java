@@ -3,16 +3,20 @@ import java.util.Scanner;
 public class Exercicio10 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int soma = 0;
-        int numero;
 
-        do {
-            System.out.print("Digite um número ou 0 para sair: ");
-            numero = sc.nextInt();
-            soma += numero;
-        } while (numero != 0);
+        System.out.print("Digite o valor da compra: ");
+        double valor = sc.nextDouble();
 
-        System.out.println("Soma total: " + soma);
+        double valorFinal;
+
+        if (valor >= 100) {
+            valorFinal = valor * 0.9;
+        } else {
+            valorFinal = valor;
+        }
+
+        System.out.println("Valor final: R$ " + valorFinal);
+
         sc.close();
     }
 }
